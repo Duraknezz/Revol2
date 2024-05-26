@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    z-index:100 ;
+}
+
+/*:::::Pie de Pagina*/
+.pie-pagina {
+    width: 100%;
+    background-color: #333;
+}
+
+.pie-pagina .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+    width: 250px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+    color: #fff;
+    font-size: 16px;
+}
+
+.pie-pagina .grupo-1 .box p {
+    color: #efefef;
+    margin-top: 0px;
+    font-size: 12px;
+}
+
+.box .menusito {
+    justify-content: center;
+    text-align: center;
+}
+
+.box a {
+    text-decoration: none;
+    color: #fff;
+    transition: ease-in .3s;
+}
+
+.box a:hover {
+    color: #f1830b;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #1d1d1d;
+    text-align: center;
+    transition: all 0.3s ease-in;
+    /* Transición suave para todos los cambios */
+    transform: scale(1);
+    /* Escala inicial del 100% */
+    border-radius: 10%;
+    /* Radio de borde inicial */
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+    background-color: #e84335;
+    transform: scale(1.1);
+    /* Escala aumentada al hacer hover */
+    border-radius: 100%;
+    /* Cambio de radio de borde al hacer hover */
+}
+
+.pie-pagina .grupo-2 {
+    background-color: #1d1d1d;
+    padding: 10px 10px;
+    text-align: center;
+    color: #fff;
+
+}
+
+.pie-pagina .grupo-2 small {
+    font-size: 11px;
+
+}
+
+@media screen and (max-width:700px) {
+    .pie-pagina .grupo-1 {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+        text-align: center;
+    }
+
+
+}

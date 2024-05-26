@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+#principal{
+    height: auto;
+    padding-top: 20px;
+}
+
+.rectangulos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 20px; /* Espacio entre los rectángulos */
+}
+
+.rectangulo {
+    width: calc(22% ); /* El 25% del ancho del contenedor menos el espacio */
+    height: 70vh;
+    background-color: #f0f0f0; /* Color de fondo del rectángulo */
+}
+
+.imagen {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.imagen img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Ajusta el tamaño máximo del icono */
+}
+
+.titulo {
+    display: block;
+    text-align: center;
+    font-size: 200%;
+    margin-top: 55vh; /* Espacio entre la imagen y el texto */
+    font-weight: bold;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+/* Estilos para el título */
+
+/* Estilos para el título */
+.descarga {
+    padding-top: 30px;
+    text-align: center; /* Centra horizontalmente */
+    position: relative; /* Posicionamiento relativo para el subrayado */
+}
+
+.descarga h1 {
+    position: relative; /* Cambiado a relativo para que el gradiente solo aplique al texto */
+    display: inline-block; /* Para que el fondo solo aplique al texto */
+    text-align: center; /* Centra horizontalmente */
+    font-size: 40px; /* Tamaño de fuente */
+    color: white; /* Color de texto negro */
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.descarga h1::before {
+    content: ""; /* Crea un elemento antes del texto */
+    position: absolute; /* Posiciona absolutamente */
+    top: -25%; /* Lo sitúa en la mitad verticalmente */
+    left: 50%; /* Ajusta la posición izquierda al 50% del contenedor */
+    width: 80vw; /* Ancho al 50% del ancho de la pantalla */
+    height: 2em; /* Grosor del subrayado */
+    background: linear-gradient(to right, #ff9900, #ff6600); /* Gradiente para el subrayado */
+    z-index: -1; /* Coloca el fondo detrás del texto */
+    transform: translateX(-50%); /* Centra horizontalmente */
+}
+
+@media (max-width: 1200px) {
+    #principal{
+        height: auto;
+        padding-top: 20px;
+    }
+    
+    .rectangulos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:center;
+        gap: 20px; /* Espacio entre los rectángulos */
+    }
+    
+    .rectangulo {
+        width: 40vw; /* El 25% del ancho del contenedor menos el espacio */
+        height: 30vh;
+        background-color: #f0f0f0; /* Color de fondo del rectángulo */
+    }
+    
+    .imagen {
+        position: relative;
+        width: 100%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+    }
+    
+    .imagen img {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 80%; /* Ajusta el tamaño máximo del icono */
+    }
+    
+    .titulo {
+        display: block;
+        text-align: center;
+        font-size: 100%;
+        margin-top: 20vh; /* Espacio entre la imagen y el texto */
+        font-weight: bold;
+        font-family: 'Red Hat Display', sans-serif;
+    }
+    
+    /* Estilos para el título */
+    
+    /* Estilos para el título */
+    .descarga {
+        padding-top: 30px;
+        text-align: center; /* Centra horizontalmente */
+        position: relative; /* Posicionamiento relativo para el subrayado */
+    }
+    
+    .descarga h1 {
+        position: relative; /* Cambiado a relativo para que el gradiente solo aplique al texto */
+        display: inline-block; /* Para que el fondo solo aplique al texto */
+        text-align: center; /* Centra horizontalmente */
+        font-size: 30px; /* Tamaño de fuente */
+        color: white; /* Color de texto negro */
+        font-family: 'Red Hat Display', sans-serif;
+    }
+    
+    .descarga h1::before {
+        content: ""; /* Crea un elemento antes del texto */
+        position: absolute; /* Posiciona absolutamente */
+        top: -25%; /* Lo sitúa en la mitad verticalmente */
+        left: 50%; /* Ajusta la posición izquierda al 50% del contenedor */
+        width: 80vw; /* Ancho al 50% del ancho de la pantalla */
+        height: 2em; /* Grosor del subrayado */
+        background: linear-gradient(to right, #ff9900, #ff6600); /* Gradiente para el subrayado */
+        z-index: -1; /* Coloca el fondo detrás del texto */
+        transform: translateX(-50%); /* Centra horizontalmente */
+    }
+}

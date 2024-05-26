@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #EAEBEF;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+}
+
+.logo{
+    padding-bottom: 4vh;
+    padding-top: 20px;
+}
+
+.logo img{
+    height: 4.5vh;
+    padding-left: 3%;
+}
+
+
+#lateral{
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    font-size: 2vh;
+}
+
+.nav{
+    width: 100%;
+    height: 100vh;
+}
+
+.nav__link{
+    color: #303440;
+    display: block;
+    padding: 15px 0;
+    text-decoration: none;
+}
+
+.nav__link--inside{
+    border-radius: 6px ;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.nav__link--inside:hover{
+    background: #F6F8FA;
+}
+
+.list{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 16px 16px 0;
+    background: #fff;
+}
+
+.list__item{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.list__item--click{
+    cursor: pointer;
+}
+
+.list__button{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.arrow .list__arrow{
+    transform: rotate(90deg);
+}
+
+.list__arrow{
+    margin-left: auto;
+    transition: transform .3s;
+}
+
+.list__show{
+    width: 80%;
+    margin-left: auto;
+    border-left: 2px solid #303440;
+    list-style: none;
+    transition: height .4s;
+    height: 0;
+}
+
+#panel{
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px; /* Ajustar para que no se superponga con el menú lateral */
+    padding: 20px;
+    width: calc(100% - 300px); /* Ajustar el ancho del panel para que ocupe el resto del espacio */
+}
+
+#panel .titulo{
+    width: 100%;
+    text-align: start;
+}
+
+#panel h1{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 5.5vh;
+}
+
+#panel h2{
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 3vh;
+}
+
+#panel h2:after {
+    content: "";
+    position: absolute;
+    bottom: 84vh; /* Coloca la barra 10 píxeles debajo del texto */
+    width: 88vw; /* largo de la barra */
+    height: 0.3%; /* Grosor de la barra */
+    background-color: #303440;
+    transform: translateX(-35%); /* Centra la barra horizontalmente */
+    left: 43vw;
+    z-index: -1;
+}
+
+#panel p{
+    padding-top: 15vh;
+    padding-left: 5vw;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.salir{
+    position:fixed;
+    padding-top: 90vh;
+    padding-left: 2vw;
+}
+
+.upload-container {
+    display:block;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding-right: 41vw;
+}
+
+.upload-box {
+    width: 80vh;
+    height: 25vw;
+    border: 2px dashed #303440;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    background-image: url('agregarImagen.png'); /* Cambia la ruta a la de tu imagen */
+    background-size: calc(80% - 20%) calc(80% - 20%); /* Reduce el tamaño de la imagen dejando un margen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: 50%;
+    margin-left: 5vw;
+}
+
+.upload-box span {
+    text-align: center;
+    color: #303440;
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.menu-form {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30vh;
+    margin-left: 50vw;
+    width: 25%; /* Ajustar el ancho del formulario según sea necesario */
+}
+
+.menu-form label {
+    font-weight: bold;
+}
+
+.menu-form select,
+.menu-form input,
+.menu-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.menu-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+#save-button {
+    background-color: #303440;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start; /* Alinear el botón al inicio del formulario */
+    background: linear-gradient(to right, #ff9900, #ff6600);
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    display: inline-block;
+    width: 20vw;
+    margin: 0 auto;
+    left: 45%;
+    transform: scale(1);
+    z-index: 10;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif;
+    margin-top: 20px;
+}
+
+#save-button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.1);
+}
+
+#save-button:hover {
+    background-color: #202530;
+}
+
+@media (max-width: 500px) {
+    /* Estilos previos... */
+    body{
+        background: #EAEBEF;
+        font-family: 'Poppins', sans-serif;
+        display: flex;
+    }
+    
+
+    #container {
+        position: relative;
+        flex-direction: column; /* Para dispositivos móviles, cambia a disposición vertical */
+        width: 80%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .logo{
+        margin-top: vh;
+        height: 5vh;
+        border-bottom: 10px;
+    }
+
+    .logo img{
+        height: 5vh;
+    }
+    
+    #lateral {
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    display: block;
+    flex-direction: row; /* Organiza los elementos en fila */
+    height: 20vh; /* Alto del rectángulo */
+    width: 100%;
+    }
+    
+    .nav {
+        height: 20vh; /* Altura automática para adaptarse al contenido */
+    }
+    
+    .list{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+    }
+
+    .salir{
+        display: flex;
+        padding-top: 1vh;
+        padding-left: 90%;
+        width: 10px;
+    }
+    
+    
+    .menu-form {
+        margin-left: 0; /* Elimina el margen izquierdo en dispositivos móviles */
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    #panel{
+        display: block;
+        flex-direction: column;
+        margin-left: 20vw; /* Ajustar para que no se superponga con el menú lateral */
+        padding: 20px;
+        padding-top: 20vh;
+        text-align: center; /* Alinea el contenido al centro */
+        justify-content: center;
+    }
+    
+    #panel h1,
+    #panel h2,
+    #panel p {
+        text-align: center; /* Centra todos los textos dentro de #panel */
+    }
+
+    #panel .titulo{
+        text-align: center; /* Alinea el título al centro */
+        padding-top: 60px;
+        justify-content: center;
+    }
+    
+    #panel h1{
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 3vh;
+    }
+    
+    #panel h2{
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 1.8vh;
+    }
+
+    #panel h2:after {
+        content: "";
+        position: absolute;
+        top: 47vh; /* Coloca la barra 10 píxeles debajo del texto */
+        width: 100vw; /* largo de la barra */
+        height: 0.3%; /* Grosor de la barra */
+        background-color: #303440;
+        transform: translateX(-46%); /* Centra la barra horizontalmente */
+        z-index: -1;
+        align-items: start;
+    }
+    
+    #panel p{
+        padding-top: 3vh;
+        font-family: 'Red Hat Display', sans-serif;
+        font-size: 3vh;
+        font-weight: bold;
+        text-align: center; /* Alinea el texto al centro */
+    }
+
+    #contenidoPanel{
+        text-align: center;
+        align-items: center;
+        display: flex;
+    }
+    
+    .upload-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .upload-box {
+        width: 200px;
+        height: 200px;
+        border: 2px dashed #303440;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        margin-bottom: 10px;
+        background-image: url('agregarImagen.png'); /* Cambia la ruta a la de tu imagen */
+        background-size: calc(80% - 20px) calc(80% - 20%); /* Reduce el tamaño de la imagen dejando un margen */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center; /* Centra la imagen */
+    }
+    
+    .upload-box span {
+        text-align: center;
+        color: #303440;
+        background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco semitransparente */
+        padding: 5px;
+        border-radius: 5px;
+    }
+    
+    #upload-button {
+        background-color: #303440;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #upload-button:hover {
+        background-color: #202530;
+    }
+    
+    .menu-form {
+        display:contents;
+        flex-direction: column;
+        gap: 15px;
+        align-items:center;
+        height: 50vh;
+        text-align: center;
+    }
+    
+    .menu-form label {
+        font-weight: bold;
+        align-items:center;
+        text-align: center;
+    }
+    
+    .menu-form select,
+    .menu-form input,
+    .menu-form textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .menu-form textarea {
+        resize: vertical;
+        height: 100px;
+    }
+    
+    #save-button {
+        background-color: #303440;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #save-button:hover {
+        background-color: #202530;
+    }
+}

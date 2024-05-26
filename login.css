@@ -1,0 +1,98 @@
+ @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+@font-face {
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 400;
+    /* Peso de la fuente normal */
+    src: url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap') format('woff2'),
+        /* Cambia la ruta a la ubicación real de tu archivo de fuente */
+        url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap') format('woff');
+    /* Cambia la ruta a la ubicación real de tu archivo de fuente */
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Red Hat Display', sans-serif
+}
+
+.background {
+    background-image: url('/imagenes/editadas/_DSC0001.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh;
+    padding-right: 10%; /* Agrega un padding para no pegar el formulario a la derecha */
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    width: 350px;
+    height: 70%;
+
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.login-header img {
+    display: block;
+    margin: 0 auto 20px;
+    height: 50px; /* Ajusta según el tamaño real del logo */
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="email"], input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="email"]:hover, input[type="password"]:hover {
+    border-color: #888;
+}
+
+button {
+    background: linear-gradient(to right, #FF7F00, #FF3300);
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.forgot-password {
+    text-align: center;
+    color: #555;
+    margin-top: 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.forgot-password:hover {
+    color: #222;
+}

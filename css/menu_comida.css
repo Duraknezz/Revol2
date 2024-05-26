@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+.contenedor {
+    text-align: center;
+    position: relative; /* Fija el contenedor en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 10; /* Ajusta el índice z para asegurarte de que esté por encima de otros elementos */
+    background-color: white;
+    padding: 10px 0; /* Ajusta el padding para reducir la altura */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#menu-titulo {
+    height: 30px; /* Reduce la altura del título del menú */
+}
+
+.carousel-inner {
+    transform: translateX(0); /* Asegúrate de que el carrusel empiece desde el principio */
+}
+
+.carousel button {
+    visibility: hidden;
+}
+
+h1 {
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 32px;
+    color: black;
+    margin: 20px 0;
+}
+
+#platillos {
+    height: 20vh;
+}
+
+.tacos {
+    color: rgb(231, 45, 54);
+    font-size: 24px;
+    position: relative;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.tacos::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px; /* Coloca la barra 10 píxeles debajo del texto */
+    width: 40%; /* largo de la barra */
+    height: 2px; /* Grosor de la barra */
+    background: black;
+    transform: translateX(-50%); /* Centra la barra horizontalmente */
+}
+
+.menu-titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 24px;
+    color: white;
+}
+
+.circulito {
+    display: inline-block;
+    width: 100px; /* Reduce el tamaño */
+    height: 100px; /* Reduce el tamaño */
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 10px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circulito:hover {
+    border: 5px solid orange;
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.7);
+}
+
+.circulito::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: inherit;
+}
+
+.contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido img {
+    position: fixed;
+    filter: blur(1px); /* Aplica un filtro de desenfoque */
+    opacity: 0.4; /* Ajusta la opacidad */
+}
+
+.contenedor span {
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    z-index: 1;
+    position: relative;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 800;
+}
+
+.prueba {
+    height: 500vh;
+}
+
+@media (max-width: 1200px) {
+    .contenedor {
+        padding: 5px 0; /* Ajusta el padding para reducir la altura */
+    }
+
+    .circulito {
+        width: 80px; /* Ajusta el tamaño para pantallas más pequeñas */
+        height: 80px; /* Ajusta el tamaño para pantallas más pequeñas */
+    }
+
+    .circulito::before {
+        width: 80px; /* Ajusta el tamaño para pantallas más pequeñas */
+        height: 80px; /* Ajusta el tamaño para pantallas más pequeñas */
+    }
+
+    .contenedor span {
+        font-size: 12px; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+
+    h1 {
+        font-size: 24px; /* Ajusta el tamaño de la fuente para pantallas más pequeñas */
+    }
+}

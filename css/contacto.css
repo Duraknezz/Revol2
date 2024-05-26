@@ -1,0 +1,548 @@
+/* POPPINS FONT */
+ @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 400; /* Peso de la fuente normal */
+  src: url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap') format('woff2'), /* Cambia la ruta a la ubicación real de tu archivo de fuente */
+       url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap') format('woff'); /* Cambia la ruta a la ubicación real de tu archivo de fuente */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.contenedor {
+  background-color: #fff;
+}
+
+#principalContacto{
+    height: 500px;
+    background-color: white;
+    font-family: 'Red Hat Display', sans-serif; /* Fallback a una fuente sans-serif por si la fuente no se carga correctamente */
+    height: 50vh;
+}
+
+#principalContacto .contacto h1{
+    font-size: 50px;
+    color: rgb(231, 45, 54);
+}
+
+#principalContacto .contenedor {
+    text-align: center; /* Para centrar el contenido */
+    height: 50vh;
+  }
+
+  .medio-circulo {
+    width: 100%; /* Ancho del círculo */
+    height: 100vh; /* Altura del círculo */
+    background-color: #f0f0f0; /* Color de fondo del círculo */
+    border-radius: 0 0 3000px 3000px; /* Hacemos que la esquina inferior izquierda y derecha sean redondeadas para crear un círculo perfecto */
+    position: relative; /* Permitirá posicionar la imagen dentro del círculo */
+    margin: -200px auto 0;
+    overflow: hidden; /* Para ocultar partes de la imagen que sobrepasen el círculo */
+    z-index: 1;
+  }
+
+  
+  
+  .medio-circulo img {
+    width: 100%; /* La imagen ocupará todo el ancho del círculo */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+    display: block; /* Para eliminar cualquier espacio adicional alrededor de la imagen */
+    position: absolute; /* Posiciona la imagen relativa al contenedor */
+    bottom: 0; /* Alinea la imagen en la parte inferior del círculo */
+    left: 50%; /* Coloca la imagen en el centro horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición de la imagen horizontalmente */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor sin distorsionarla */
+    opacity: 0; /* Configura la opacidad inicial en 0 (completamente transparente) */
+    animation: aparecer 1s ease forwards; /* Define la animación 'aparecer' con una duración de 1 segundo */
+    z-index: 1;
+    filter: blur(3px); /* Aplica un desenfoque de 5px a la imagen de fondo */
+  }
+  
+  @keyframes aparecer {
+    from {
+      opacity: 0; /* Comienza con una opacidad de 0 */
+    }
+    to {
+      opacity: 1; /* Termina con una opacidad de 1 */
+    }
+  }
+  
+  .medio-circulo h1 {
+    color: white;
+    font-size: 100px;
+    position: relative;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+
+  }
+  
+  .medio-circulo h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Coloca la barra 10 píxeles debajo del texto */
+    width: 45%; /* largo de la barra */
+    height: 10%; /* Grosor de la barra */
+    background: linear-gradient(to right, #ff9900, #E72D36);
+    transform: translateX(-50%); /* Centra la barra horizontalmente */
+    
+  }
+  
+  
+
+  .medio-circulo h2 {
+    color: white;
+  font-size: 50px;
+  position: relative;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2; /* Asegura que el texto esté por encima de la imagen */
+  color: white;
+  font-family: 'Red Hat Display', sans-serif; /* Fallback a una fuente sans-serif por si la fuente no se carga correctamente */
+  font-weight: normal;
+  }
+
+  .medio-circulo h3 {
+  color: white;
+  font-size: 50px;
+  position: relative;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2; /* Asegura que el texto esté por encima de la imagen */
+  font-family: 'Red Hat Display', sans-serif; /* Fallback a una fuente sans-serif por si la fuente no se carga correctamente */
+  font-weight: 800;
+  }
+  
+  
+  #sociales .contacto{
+    margin-top: 50px; /* Espacio entre el círculo y el texto de contacto */
+    font-size: 50px;
+    color: rgb(231, 45, 54);
+    font-family: 'Red Hat Display', sans-serif; /* Fallback a una fuente sans-serif por si la fuente no se carga correctamente */
+    text-align: center;
+  }
+
+  
+#principalContacto a{
+    size: 1100px;
+}
+
+#sociales {
+  padding-top: 50vh;
+}
+
+.redes {
+  text-align: center; /* Centra los elementos horizontalmente */
+}
+
+.redes .facebook,
+.redes .whatsapp {
+  display: inline-block; /* Coloca los elementos en una línea */
+  margin: 0 100px; /* Espacio horizontal entre los iconos */
+}
+
+
+.redes .facebook {
+  margin-bottom: 100px; /* Agrega espacio entre la primera imagen y la segunda */
+}
+
+.redes .whatsapp {
+  margin-top: 100px; /* Agrega espacio entre la segunda imagen y la primera */
+}
+
+
+.redes .whatsapp img {
+  width: 400px; /* Tamaño de las imágenes */
+}
+
+.redes .facebook img{
+  width: 450px; /* Tamaño de las imágenes */
+}
+
+
+
+  .sucursales {
+    background-color: white;
+    height: 100px;
+    text-align: center; /* Centra el texto horizontalmente */
+    line-height: 100px; /* Centra el texto verticalmente */
+    font-size: 50px; /* Tamaño de fuente más grande */
+    color: rgb(231, 45, 54);
+    font-family: 'Red Hat Display', sans-serif; /* Fallback a una fuente sans-serif por si la fuente no se carga correctamente */
+  }  
+
+#contacto {
+    display:block;
+    background-color: white;
+    height: 90vh;
+}
+
+#mapita {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding-bottom: 6vh;
+}
+
+
+#map {
+    height: 80%;
+    width: 80%;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+}
+
+#flecha {
+  background-color: #fff;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 40px;
+  display: flex; /* Utilizamos flexbox */
+  justify-content: center; /* Centramos horizontalmente */
+  align-items: center; /* Centramos verticalmente */
+  height: 20vh;
+}
+  
+  #flecha img {
+    display: block; /* Para que la imagen ocupe todo el ancho del contenedor */
+    height: 20vh;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border-bottom: 200px;
+  }
+  
+
+  footer {
+    background-color: #333; /* Gris oscuro como en tu ejemplo */
+    padding: 20px 50px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Red Hat Display', sans-serif; /* Fallback a una fuente sans-serif por si la fuente no se carga correctamente */
+}
+
+.footer-logo img {
+    display: block;
+    margin: 0 auto 20px; /* Centrado y con espacio hacia abajo */
+    width: 280px; /* Ajustar según el tamaño deseado */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ccc; /* Gris más claro para el texto */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 10px; /* Espaciado para no pegar los textos a los bordes */
+}
+
+.footer-section h4 {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #fff; /* Blanco para los títulos */
+}
+
+.footer-section p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    color: #fff; /* Blanco para los iconos */
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #ddd; /* Gris claro para el hover */
+}
+
+
+@media (max-width: 600px) {
+
+  
+  /* POPPINS FONT */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+@font-face {
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 400; /* Peso de la fuente normal */
+  src: url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap') format('woff2'), /* Cambia la ruta a la ubicación real de tu archivo de fuente */
+    url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap') format('woff'); /* Cambia la ruta a la ubicación real de tu archivo de fuente */
+}
+
+body {
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+
+
+#principalContacto .contacto h1 {
+  font-size: 20px;
+  color: rgb(231, 45, 54);
+}
+
+#principalContacto{
+  height: 30vh;
+}
+
+#principalContacto .contenedor {
+  text-align: center; /* Para centrar el contenido */
+}
+
+.medio-circulo {
+  width: 100vw; /* Ancho del círculo */
+  height: 30vh; /* Altura del círculo */
+  background-color: #f0f0f0; /* Color de fondo del círculo */
+  border-radius: 0 0 3000px 3000px; /* Hacemos que la esquina inferior izquierda y derecha sean redondeadas para crear un círculo perfecto */
+  position: relative; /* Permitirá posicionar la imagen dentro del círculo */
+  margin: -50px auto; /* Centra horizontalmente */
+  overflow: hidden; /* Para ocultar partes de la imagen que sobrepasen el círculo */
+}
+
+.medio-circulo img {
+  width: 100%; /* La imagen ocupará todo el ancho del círculo */
+  height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+  display: block; /* Para eliminar cualquier espacio adicional alrededor de la imagen */
+  position: absolute; /* Posiciona la imagen relativa al contenedor */
+  bottom: 0; /* Alinea la imagen en la parte inferior del círculo */
+  left: 50%; /* Coloca la imagen en el centro horizontalmente */
+  transform: translateX(-50%); /* Ajusta la posición de la imagen horizontalmente */
+  object-fit: cover; /* Ajusta la imagen dentro del contenedor sin distorsionarla */
+  opacity: 0; /* Configura la opacidad inicial en 0 (completamente transparente) */
+  animation: aparecer 1s ease forwards; /* Define la animación 'aparecer' con una duración de 1 segundo */
+  z-index: 1;
+  filter: blur(6px); /* Aplica un desenfoque de 5px a la imagen de fondo */
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0; /* Comienza con una opacidad de 0 */
+  }
+  to {
+    opacity: 1; /* Termina con una opacidad de 1 */
+  }
+}
+
+    .medio-circulo h1 {
+      color: white;
+      font-size: 30px;
+      position: relative;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+      font-family: 'Red Hat Display', sans-serif;
+      font-weight: 900;
+  
+    }
+  
+    .medio-circulo h1::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -5px;
+      /* Coloca la barra 10 píxeles debajo del texto */
+      width: 45%;
+      /* largo de la barra */
+      height: 10%;
+      /* Grosor de la barra */
+      background: linear-gradient(to right, #ff9900, #E72D36);
+      transform: translateX(-50%);
+      /* Centra la barra horizontalmente */
+  
+    }
+  
+  
+  
+    .medio-circulo h2 {
+      color: white;
+      font-size: 20px;
+      position: relative;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+      /* Asegura que el texto esté por encima de la imagen */
+      color: white;
+      font-family: 'Red Hat Display', sans-serif;
+      /* Fallback a una fuente sans-serif por si la fuente no se carga correctamente */
+      font-weight: normal;
+    }
+  
+    .medio-circulo h3 {
+      color: white;
+      font-size: 20px;
+      position: relative;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 2;
+      /* Asegura que el texto esté por encima de la imagen */
+      font-family: 'Red Hat Display', sans-serif;
+      /* Fallback a una fuente sans-serif por si la fuente no se carga correctamente */
+      font-weight: 800;
+    }
+
+#sociales {
+  padding-top: 0rem;
+}
+
+#sociales .contacto {
+  margin-top: 10px; /* Espacio entre el círculo y el texto de contacto */
+  font-size: 20px;
+  color: rgb(231, 45, 54);
+  text-align: center;
+}
+
+.redes .facebook,
+.redes .whatsapp {
+  display: block; /* Cambia a bloque para que se muestren en una línea */
+  margin: 10px auto; /* Centra horizontalmente y agrega espacio vertical */
+}
+
+.redes .whatsapp img {
+  width: 150px; /* Tamaño de las imágenes */
+}
+
+.redes .facebook img {
+  width: 170px; /* Tamaño de las imágenes */
+}
+
+.sucursales {
+  font-size: 20px; /* Tamaño de fuente */
+  line-height: 2.5; /* Altura de línea */
+  text-align: center; /* Centra el texto horizontalmente */
+  color: rgb(231, 45, 54);
+  height: 3vh;
+}
+
+#contacto {
+  height: auto;
+}
+
+#mapita {
+  padding: 20px; /* Añade relleno */
+  height: 40vh;
+}
+
+#map {
+  width: 100%; /* Ajusta el ancho al 100% */
+  height: 300px; /* Altura fija */
+}
+
+#flecha {
+  font-size: 20px; /* Tamaño de fuente */
+  display: flex; /* Utilizamos flexbox */
+  justify-content: center; /* Centramos horizontalmente */
+  align-items: center; /* Centramos verticalmente */
+  height: 10vh;
+}
+
+#flecha img {
+  display: block; /* Para que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Altura automática */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+#flecha p{
+  text-align: center;
+}
+
+footer {
+  padding: 20px; /* Añade relleno */
+}
+
+.footer-logo img {
+  display: block;
+  margin: 0 auto 20px; /* Centrado y con espacio hacia abajo */
+  width: 200px; /* Ajustar según el tamaño deseado */
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Envuelve los elementos del footer en varias líneas si no caben en una sola línea */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  color: #ccc; /* Gris más claro para el texto */
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 10px; /* Espaciado para no pegar los textos a los bordes */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
+.footer-section h4 {
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #fff; /* Blanco para los títulos */
+}
+
+.footer-section p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Centra horizontalmente los elementos */
+}
+
+.social-icon {
+  color: #fff; /* Blanco para los iconos */
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  color: #ddd; /* Gris claro para el hover */
+}
+
+}
+
+/* Eliminar márgenes y rellenos excesivos entre secciones */
