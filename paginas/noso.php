@@ -22,6 +22,7 @@
                 </div>
             </div>
         </section>
+        
         <section id="TituloA">
             <h1>Acerca de nuestro Menú</h1>
         </section>
@@ -37,9 +38,11 @@
                 </div>
             </div>
         </section>
+
         <section id="TituloV">
             <h1>Acerca de nuestra comida</h1>
         </section>
+
         <section id="vision">
             <div class="container-vision">
                 <div class="textoV">
@@ -60,6 +63,7 @@
                 </div>
             </div>
         </section>
+        
         <section id="Eeventos">
             <div class="container-E">
                 <div class="texto-E">

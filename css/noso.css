@@ -7,10 +7,12 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     font-family: "Red Hat Display", sans-serif;
-    overflow-x: hidden; /* Evita el desbordamiento horizontal */
+    overflow-x: hidden;
+    /* Evita el desbordamiento horizontal */
 }
 
 p {
@@ -48,6 +50,7 @@ p {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -58,6 +61,7 @@ p {
         transform: translateX(-100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -69,6 +73,7 @@ p {
         transform: translateX(100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -78,7 +83,10 @@ p {
 /*-----------------------------------------IMAGEN CIRCULAR--------------------------------------------------- */
 #Titulo-Circular {
     background-color: white;
-    font-family: 'Red Hat Display', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: hidden;
 }
@@ -89,18 +97,23 @@ p {
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 .medio-circulo {
     width: 100%;
     height: 100vh;
     background-color: #f0f0f0;
-    border-radius: 0 0 3000px 3000px;
+    border-radius: 0 0 40vw 40vw;
     position: relative;
     margin: 0 auto;
     overflow: hidden;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .medio-circulo img {
@@ -121,6 +134,7 @@ p {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -148,6 +162,7 @@ p {
 }
 
 .medio-circulo p {
+    width: 98%;
     color: white;
     font-size: 2vw;
     position: relative;
@@ -225,7 +240,8 @@ p {
     grid-column: span 2;
 }
 
-.img-2, .img-3 {
+.img-2,
+.img-3 {
     grid-column: span 1;
 }
 
@@ -233,13 +249,15 @@ p {
 .container-E {
     position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-    background-image: linear-gradient(to left, transparent, black), url(../imagenes/saxofon.jpg);
-    background-size: 85em, cover;
-    background-position: 30%, center;
+    /* opacity: 0; */
+    /* animation: fadeIn 1s forwards; */
+    /* background-image: linear-gradient(to left, transparent, black), url(../imagenes/saxofon.jpg); */
+    background-image: url(../imagenes/saxofon.jpg);
+    background-size: 100%, cover; 
+    background-position: 30%,center; 
+    width: 100%;
+    /* object-fit: contain; */
 }
 
 #Eeventos {
