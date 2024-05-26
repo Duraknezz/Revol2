@@ -250,13 +250,16 @@ p {
     position: relative;
     display: flex;
     align-items: center;
-    /* opacity: 0; */
-    /* animation: fadeIn 1s forwards; */
-    /* background-image: linear-gradient(to left, transparent, black), url(../imagenes/saxofon.jpg); */
-    background-image: url(../imagenes/saxofon.jpg);
-    background-size: 100%, cover; 
-    background-position: 30%,center; 
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    background-color: #333;
+    background-image: linear-gradient(to left, transparent, black), url(../imagenes/saxofon.jpg);
+    /* background-image: url(../imagenes/saxofon.jpg); */
+    
+    background-size: 90rem, cover;
+    background-position: 30%, center;
     width: 100%;
+    height: 40vh;
     /* object-fit: contain; */
 }
 
@@ -265,13 +268,18 @@ p {
 }
 
 .sangria-E {
+    width: 33%;
     padding: 0 60px;
-    text-align: justify;
+    text-align: start;
     color: #ffffff;
     font-size: 20px;
 }
 
 .Titulo-E {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
     padding: 0 60px;
     font-size: 50px;
 }
@@ -328,7 +336,12 @@ p {
     .texto {
         margin-top: 20px;
     }
+    .sangria-E {
+        width: 100%;
 
+        font-size: 20px;
+    }
+    
     .grid-img {
         grid-template-columns: 1fr;
         width: 100%;

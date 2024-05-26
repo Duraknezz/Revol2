@@ -22,7 +22,7 @@
                 </div>
             </div>
         </section>
-        
+
         <section id="TituloA">
             <h1>Acerca de nuestro Menú</h1>
         </section>
@@ -67,7 +67,7 @@
         <section id="Eeventos">
             <div class="container-E">
                 <div class="texto-E">
-                    <h1 class="Titulo-E">Explora Nuestros Eventos</h1>
+                    <h1 class="Titulo-E">Explora Nuestros <span>Eventos</span></h1>
                     <div class="line-container">
                         <div class="line"></div>
                     </div>
